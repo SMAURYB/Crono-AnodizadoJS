@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEMPORIZADOR ANODIZADO</title>
+    <!-- <link href="https://allfont.es/allfont.css?fonts=led-sands" rel="stylesheet" type="text/css" /> -->
+    <link href="http://fonts.cdnfonts.com/css/led-digital-7" rel="stylesheet">                   
+    <link rel="stylesheet" href="crono.css">
+</head>
+<body>
+    <div>
+        <h1 class="title">ANODIZADO ALUMINIO</h1>
+    </div>
+    <form>
+        <div >
+            <label class="paso">
+                <h2>   1 - ELECTRÓLISIS</h2> 
+                <input id="settime1" class="input_time" type="text" placeholder="00:00">
+                <h3>Minutos</h3>
+                <div class="countdown"> <p id="countdown1"></p></div>
+            </label><br>
+        </div>
+        <div>
+            <label class="paso">
+                <h2>   2 - COLOR - TINTE</h2> 
+                <input id="settime2" class="input_time" type="text" placeholder="00:00">
+                <h3>Minutos</h3>
+                <div class="countdown"> <p id="countdown2"></p></div>
+            </label><br>
+        </div>
+        <div>
+            <label class="paso">
+                <h2>   3 -    SELLADO 100°C</h2> 
+                <input id="settime3" class="input_time" type="text" placeholder="00:00">
+                <h3>Minutos</h3>
+                <div class="countdown"> <p id="countdown3"></p></div>
+            </label>
+        </div>
+        
+        <BR>
+    <div class="controls">
+        <div class="board_set">
+            <button id="set_time" class="set_time" type="button" onclick="capture()" value="SET TIMES">SET TIME</button>
+            <button id="reset_time" class="reset_time" type="button" onclick="resettimes()" value="RESET TIMES">RESET TIME</button>
+        </div>
+        <div class="board">
+            <button id="playbutton" class=playbutton type="button" onclick="plays()">
+                <img class="play" src=https://res.cloudinary.com/sergiomurybenedetti/image/upload/v1651328089/PikPng.com_triangle-icon-png_5672412_jfgktn.png>
+            </button> 
+            <button id="pausebuttons" class=pausebutton type="button" onclick={pauses();}>
+                <img class="pause" src=https://res.cloudinary.com/sergiomurybenedetti/image/upload/v1651329204/pause_ioxyhj.png>
+            </button> 
+            <button id="stopbutton" class=stopbutton type="button" onclick="stops()">
+                <img class="stop" src=https://res.cloudinary.com/sergiomurybenedetti/image/upload/v1651328651/stop_garehi.png>
+            </button> 
+        </div>
+        </div>
+
+        <div class="relojbox">
+            <div class="wrap">
+                <div class="widget">
+                    <div class="fecha">
+                        <p id="diaSemana" class="diaSemana"> </p>
+                        <p id="dia" class="dias"></p>
+                        <p>de </p>
+                        <p id="mes" class="mes"></p>
+                        <p>del </p>
+                        <p id="year" class="year"></p>
+                    </div>
+        
+                    <div class="reloj_box">
+                        <div class="hora_min">
+                            <p id="horas" class="horas"></p>
+                            <p>:</p>
+                            <p id="minutos" class="minutos"></p>
+                        </div>
+                        <div class="segundos_ampm">
+                            <p id="segundos" class="segundos"></p>
+                            <p id="ampm" class="ampm"></p>
+                        </div>
+                            
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <script src="./countdown.js"></script>
+
+</body>
+</html>
+
+
